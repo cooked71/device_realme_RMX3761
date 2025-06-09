@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 
 DEVICE_PATH := device/realme/RMX3761
+TARGET_COPY_OUT_VENDOR:=vendor
+TARGET_COPY_OUT_PRODUCT:=product
+TARGET_COPY_OUT_SYSTEM_EXT:=system_ext
+
 
 # Inherit from the proprietary version
 include vendor/realme/RMX3761/BoardConfigVendor.mk
@@ -82,8 +86,8 @@ VENDOR_SECURITY_PATCH := 2024-01-05
 # SELinux
 BOARD_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/private
 BOARD_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/vendor
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/realme/RMX3761/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/realme/RMX3761/sepolicy/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += device/realme/RMX3761/sepolicy/vendor
 
 # VINTF
